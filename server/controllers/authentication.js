@@ -8,7 +8,6 @@ function tokenForUser(user) {
 }
 
 exports.signin = function(req, res, next) {
-	console.log('this is body',req.body)
 	res.send({ token: tokenForUser(req.user) });
 }
 
