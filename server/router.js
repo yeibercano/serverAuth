@@ -7,7 +7,7 @@ const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = function(app) {
 	app.get('/', requireAuth, function(req, res) {
-		res.send({ authorized: 'you made it' });
+		res.send({ message: 'access featured route' });
 	});
 	app.post('/signin', requireSignin, Authentication.signin);
 	app.post('/signup', Authentication.signup);
